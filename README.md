@@ -525,6 +525,22 @@ Playwright supports:
 npx playwright show-report
 ```
 
+Discover, Analyse and Suggest Test Cases
+/mcp runtask: |Discover the login form fields.Consider what tests we could execute.
+tools: ["playwright"]
+mode: "agent"
+url: "https://jupiter.cloud.planittesting.com/#/"
+
+Add Coverage based on MCP Investigation
+Role: 
+As an automation engineer
+Input: (Copy from the o/p of agent prompt response)
+Steps:
+Create high priority test case coverage for login form
+Expected Output:
+Use POM (Page Object Modal)
+Create tests in /test/login.spec.ts
+Create login logic in BasePage class within /pages
 ---
 
 # 🚀 CI/CD Ready
