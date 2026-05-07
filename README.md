@@ -1,7 +1,28 @@
 # 🚀 Jupiter Toys Automation Framework
 
 Enterprise-grade End-to-End Automation Testing Framework built using
-[Playwright](https://playwright.dev?utm_source=chatgpt.com) + [TypeScript](https://www.typescriptlang.org?utm_source=chatgpt.com) with AI-assisted engineering powered by [GitHub Copilot](https://github.com/features/copilot?utm_source=chatgpt.com) and [Model Context Protocol (MCP)](https://modelcontextprotocol.io?utm_source=chatgpt.com).
+[Playwright](https://playwright.dev?utm_source=chatgpt.com) + [TypeScript](https://www.typescriptlang.org?utm_source=chatgpt.com) with AI-assisted engineering powered by [GitHub Copilot](https://github.com/features/copilot?utm_source=chatgpt.com)
+
+---
+
+# 🚀 Quick Start
+
+Get up and running in just 4 steps:
+
+```bash
+# 1. Clone the repository
+git clone https://github.com/MachaniAshok303/Playwright_MCP_Jupiter.git
+cd Playwright_MCP_Jupiter/jupiter-toys/e2e
+
+# 2. Install dependencies
+npm install
+
+# 3. Install Playwright browsers
+npx playwright install
+
+# 4. Run tests
+npm run test
+```
 
 ---
 
@@ -163,10 +184,14 @@ The framework currently automates:
 
 > ⚠️ Important: Never expose real credentials in public repositories.
 
-| Field    | Value             |
-| -------- | ----------------- |
-| Username | `<test-user>`     |
-| Password | `<test-password>` |
+Create a `.env` file in the `e2e` folder:
+
+```env
+TEST_USERNAME=<test-user>
+TEST_PASSWORD=<test-password>
+```
+
+Reference them in your tests using `process.env.TEST_USERNAME` and `process.env.TEST_PASSWORD`
 
 ---
 
@@ -410,61 +435,3 @@ For collaboration or automation discussions:
 * Open an Issue
 * Create a Pull Request
 * Connect via GitHub
-
----------------------------
-A E-commerce Application "Jupiter"
-
-Tools Used :- Playwright , MCP , Github copilot, TypeScript
-Build Frame work By using RISE Prompt 
-
-prompt Details:- 
------
-Role: As an automation engineer
-
-Input:
-Create the following directory structure:
-/jupiter-toys/e2e
-/jupiter-toys/e2e/test
-/jupiter-toys/e2e/pages
-/jupiter-toys/e2e/utils
-
-Steps:
-Setup and install the following
-
-* Playwright
-* Playwright test
-* TypeScript
-* Setup a POM structure
-* Include the necessary dependencies
-
-Include the following:
-
-* Base page class
-* Home Page class
-* Test Configuration
-* TypeScript Configuration
-* Playwright Configuration
-* README with setup instructions
-
-Expected Output:
-Create a home.spec.ts test file that:
-
-* Ensure the package.json is under e2e folder
-
-* Navigates to [https://jupiter.cloud.planittesting.com/#/](https://jupiter.cloud.planittesting.com/#/)
-
-* Has a test in the home.spec.ts that verifies that the page title is 'Jupiter Toys'
-
-* Runs on Chromium, Webkit and Firefox
-
-* Can be run with 'npm run test'
-----------------------------------------------------
-
-
-----
-
-Application URL :- https://jupiter.cloud.planittesting.com/#/
-username :- Ashok
-paswword:-  letmein
-
-----
