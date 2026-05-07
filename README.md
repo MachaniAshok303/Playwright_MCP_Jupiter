@@ -136,6 +136,33 @@ Generated Test Cases / Execution
 
 ---
 
+## MCP Command Components
+
+The MCP execution command follows this structure to orchestrate AI-driven automation:
+
+| Component           | Role                       |
+| ------------------- | -------------------------- |
+| `/mcp run`          | MCP execution command      |
+| `task:`             | Natural language objective |
+| `tools: Playwright` | Automation tool            |
+| `Code:[agent]`      | Autonomous agent mode      |
+| `url:`              | Target application         |
+
+### Example MCP Command
+
+```bash
+/mcp run task:"Login to Jupiter Toys with username 'Ashok'" tools:Playwright Code:[agent] url:https://jupiter.cloud.planittesting.com/#/
+```
+
+**What happens:**
+1. `/mcp run` - Initiates the MCP execution engine
+2. `task:` - Specifies the automation goal in natural language
+3. `tools:Playwright` - Designates Playwright as the automation framework
+4. `Code:[agent]` - Enables autonomous decision-making by the AI agent
+5. `url:` - Provides the target application URL
+
+---
+
 ## Key Benefits of This Architecture
 
 ✅ **Intelligent Automation**: AI understands requirements in natural language  
@@ -566,7 +593,7 @@ If you found this project useful:
 
 * ⭐ Star the repository
 * 🍴 Fork the repository
-* 🛠️ Contribute enhancements
+* ���️ Contribute enhancements
 * 📢 Share with the QA community
 
 ---
