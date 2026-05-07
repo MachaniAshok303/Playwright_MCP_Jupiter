@@ -1,0 +1,34 @@
+{
+  "name": "jupiter-toys-e2e",
+  "version": "1.0.0",
+  "description": "Playwright automation tests for Jupiter Toys",
+  "main": "index.js",
+  "scripts": {
+    "test": "playwright test",
+    "test:headed": "playwright test --headed",
+    "test:ui": "playwright test --ui",
+    "test:debug": "playwright test --debug",
+    "test:chromium": "playwright test --project=chromium",
+    "test:firefox": "playwright test --project=firefox",
+    "test:webkit": "playwright test --project=webkit",
+    "allure:report": "allure generate --clean -o allure-report",
+    "allure:show": "allure open allure-report"
+  },
+  "keywords": [
+    "playwright",
+    "automation",
+    "testing"
+  ],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.40.0",
+    "@types/node": "^20.10.0",
+    "allure-commandline": "^2.25.0",
+    "allure-playwright": "^2.10.0",
+    "typescript": "^5.3.3"
+  },
+  "dependencies": {
+    "playwright-mcp": "^0.0.19"
+  }
+}
