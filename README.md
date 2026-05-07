@@ -1,7 +1,150 @@
 # 🚀 Jupiter Toys Automation Framework
 
 Enterprise-grade End-to-End Automation Testing Framework built using
-[Playwright](https://playwright.dev?utm_source=chatgpt.com) + [TypeScript](https://www.typescriptlang.org?utm_source=chatgpt.com) with AI-assisted engineering powered by [GitHub Copilot](https://github.com/features/copilot?utm_source=chatgpt.com)
+[Playwright](https://playwright.dev?utm_source=chatgpt.com) + [TypeScript](https://www.typescriptlang.org?utm_source=chatgpt.com) with AI-assisted engineering powered by [GitHub Copilot](https://github.com/features/copilot?utm_source=chatgpt.com) and [Model Context Protocol (MCP)](https://modelcontextprotocol.io?utm_source=chatgpt.com).
+
+---
+
+# 🎯 Prompt Architecture & Workflow
+
+## System Architecture
+
+The framework operates through an intelligent multi-layer architecture that combines LLM reasoning with browser automation:
+
+```
+User Prompt
+    ↓
+LLM Agent
+    ↓
+MCP Client
+    ↓
+Playwright MCP Server
+    ↓
+Browser Automation
+    ↓
+Website Inspection
+    ↓
+AI Reasoning
+    ↓
+Generated Test Cases / Execution
+```
+
+## How the Prompt Works
+
+### 1. **User Prompt Layer**
+- Users provide natural language instructions for test automation
+- Example: *"Create tests to verify login functionality on the Jupiter Toys application"*
+- The prompt can describe user interactions, validations, or complex scenarios
+
+### 2. **LLM Agent Layer** 
+- The AI agent (GitHub Copilot powered by LLMs) interprets the user prompt
+- Analyzes the requirements and maps them to automation tasks
+- Uses RISE Prompt Engineering methodology for structured thinking:
+  - **R**ole: Defines the automation engineer role
+  - **I**nput: Specifies the requirements and application details
+  - **S**teps: Breaks down the implementation into actionable steps
+  - **E**xpected Output: Defines the deliverable format
+
+### 3. **MCP Client Layer**
+- The Model Context Protocol Client acts as a bridge between the LLM and tools
+- Translates AI decisions into specific tool calls and operations
+- Manages context flow between different components
+- Handles state management across tool interactions
+
+### 4. **Playwright MCP Server Layer**
+- Receives instructions from the MCP Client
+- Provides standardized interfaces for browser automation
+- Enables the LLM to control Playwright through structured commands
+- Abstracts complex Playwright operations into reusable functions
+
+### 5. **Browser Automation Layer**
+- Playwright launches and controls real browsers (Chromium, Firefox, WebKit)
+- Executes navigation, clicks, text entry, and other user interactions
+- Maintains browser context and session state
+- Captures screenshots, traces, and execution artifacts
+
+### 6. **Website Inspection Layer**
+- Analyzes the current page state and DOM structure
+- Extracts element locators, properties, and content
+- Identifies interactive elements and form fields
+- Provides real-time feedback about page structure to the LLM
+
+### 7. **AI Reasoning Layer**
+- The LLM reasons about what it observes on the page
+- Matches observed elements with test requirements
+- Determines next actions based on current page state
+- Adapts test flow based on dynamic content
+
+### 8. **Generated Test Cases / Execution Layer**
+- Test cases are automatically generated based on the analyzed requirements
+- Tests are executed in parallel across multiple browsers
+- Results are collected and reported with detailed metrics
+- Screenshots and traces provide debugging information
+
+---
+
+## Prompt Processing Workflow
+
+### Step 1: Interpretation
+```
+"Create a test that logs into Jupiter Toys with username 'Ashok' and verifies the dashboard"
+        ↓
+[LLM analyzes and identifies]:
+- Navigate to Jupiter Toys URL
+- Locate and click login button
+- Enter username and password
+- Submit login form
+- Verify dashboard elements
+```
+
+### Step 2: Context Building
+```
+[MCP Client gathers]:
+- Application URL: https://jupiter.cloud.planittesting.com
+- Page elements and their properties
+- Available actions and validations
+- Current browser state
+```
+
+### Step 3: Automation Execution
+```
+[Playwright MCP Server]:
+- Launches browser instances
+- Navigates to application
+- Performs interactions
+- Captures page state at each step
+```
+
+### Step 4: Intelligence Loop
+```
+[AI Reasoning repeats]:
+1. Execute action
+2. Capture page state
+3. Analyze results
+4. Determine next step
+5. Adapt based on dynamic content
+```
+
+### Step 5: Test Generation
+```
+[Output generated]:
+- TypeScript test file (POM-based)
+- Test classes and methods
+- Assertions and validations
+- Error handling
+```
+
+---
+
+## Key Benefits of This Architecture
+
+✅ **Intelligent Automation**: AI understands requirements in natural language  
+✅ **Dynamic Adaptation**: Tests adapt based on actual page state  
+✅ **Reduced Manual Effort**: Automatic test case generation  
+✅ **Maintainability**: AI helps maintain and update tests  
+✅ **Cross-Browser Support**: Tests run on Chromium, Firefox, and WebKit  
+✅ **Fast Execution**: Parallel execution with detailed reporting  
+✅ **Self-Healing**: AI can suggest fixes for broken tests  
 
 ---
 
