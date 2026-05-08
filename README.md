@@ -621,3 +621,6 @@ For collaboration or automation discussions:
 * Open an Issue
 * Create a Pull Request
 * Connect via GitHub
+---
+Allure Report 
+<img width="960" height="535" alt="image" src="https://github.com/user-attachments/assets/ee45d97b-7b0a-42c3-8386-c342463eacce" />
