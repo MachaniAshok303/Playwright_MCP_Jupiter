@@ -57,6 +57,21 @@ export class BasePage {
   }
 
   /**
+   * Perform a login sequence using provided selectors
+   */
+  async login(
+    usernameSelector: string,
+    passwordSelector: string,
+    submitSelector: string,
+    username: string,
+    password: string
+  ): Promise<void> {
+    await this.fillText(usernameSelector, username);
+    await this.fillText(passwordSelector, password);
+    await this.clickElement(submitSelector);
+  }
+
+  /**
    * Get text from an element
    */
   async getText(selector: string): Promise<string> {

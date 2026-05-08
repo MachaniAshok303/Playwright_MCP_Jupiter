@@ -1,0 +1,32 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e4]:
+    - link "Jupiter Toys" [ref=e5] [cursor=pointer]:
+      - /url: "#"
+      - img [ref=e6]
+      - text: Jupiter Toys
+    - generic:
+      - list [ref=e7]:
+        - listitem [ref=e8]:
+          - link "Home" [ref=e9] [cursor=pointer]:
+            - /url: "#/home"
+            - text: Home
+        - listitem [ref=e11]:
+          - link "Shop" [ref=e12] [cursor=pointer]:
+            - /url: "#/shop"
+            - text: Shop
+        - listitem [ref=e14]:
+          - link "Contact" [ref=e15] [cursor=pointer]:
+            - /url: "#/contact"
+            - text: Contact
+      - list [ref=e17]:
+        - listitem [ref=e18]:
+          - link "Login" [ref=e20] [cursor=pointer]:
+            - /url: ""
+            - text: Login
+        - listitem [ref=e22]:
+          - link "Cart (0)" [ref=e23] [cursor=pointer]:
+            - /url: "#/cart"
+            - text: Cart (0)
+  - separator [ref=e25]
+  - contentinfo [ref=e26]:
+    - paragraph [ref=e27]: © Jupiter Toys 2026
